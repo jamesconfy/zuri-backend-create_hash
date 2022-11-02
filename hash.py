@@ -21,7 +21,7 @@ with open(input, newline="") as file, open(output, "w", newline="") as out:
         obj = obj
         obj["name"] = row["Filename"]
         obj["series_number"] = row["Series-Number"]
-        # obj["description"] = row["Description"]
+        obj["description"] = row["Description"]
         obj["collection"]["id"] = row["UUID"]
         obj["series_total"] = row_count
 
