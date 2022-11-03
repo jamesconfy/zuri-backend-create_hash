@@ -14,14 +14,14 @@ with open(input, newline="") as f:
     row_count = sum(1 for _ in reader)
 
 with open(input, newline="") as file, open(output, "w", newline="") as out:    
-    reader = csv.DictReader(file, delimiter=' ', quotechar='|')
-    writer = csv.DictWriter(out, delimiter=' ', quotechar='|', fieldnames=["SeriesNumber", "Filename", "UUID", "Hashed"])
+    reader = csv.DictReader(file, delimiter=',', quotechar='|')
+    writer = csv.DictWriter(out, delimiter=',', quotechar='|', fieldnames=["Serial Number", "Filename", "UUID", "Hashed"])
     writer.writeheader()
     for row in reader:
         obj = obj
         obj["name"] = row["Filename"]
-        obj["series_number"] = row["Series-Number"]
-        obj["description"] = row["Description"]
+        obj["series_number"] = row["Serial Number"]
+        # obj["description"] = row["Description"]
         obj["collection"]["id"] = row["UUID"]
         obj["series_total"] = row_count
 
