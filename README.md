@@ -2,6 +2,13 @@
 
 This work is created using [Python](https://www.python.org) and librabries (csv, json, hashlib and an external local obj module that cotains the json schema)
 
+## How to run the code on your system
+
+1. Clown the repository using `git clone`
+2. After clowning open the directory where you have each files and do a `python3 hash.py` NB: You need to already have python installed on your system (preferably python:3.10 and upwards).
+3. You will be promoted to enter the name of the CSV file you want to create the hash for. NB: The CSV file have to be in the same directory, so copy the CSV file to the cloned directory.
+4. After inputting the file name, the filename.output.csv will be created for you and also a filename.json that contains the nft attributes.
+
 Once the code is ran, you are prompt to input the name of your CSV file (note: this file have to be in the same folder as the code, there is also no need to add the extenstion).
 
 With this inputted value, your output file name is generated and the computation starts.
