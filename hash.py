@@ -12,7 +12,7 @@ output += f".output.csv"
 output_json += ".json"
 
 with open(input, newline="") as f:
-    reader = csv.DictReader(f, delimiter=' ', quotechar='|')
+    reader = csv.DictReader(f, delimiter=',', quotechar='|')
     row_count = sum(1 for _ in reader)
 
 with open(input, newline="") as file, open(output, "w", newline="") as out, open(output_json, "w") as outfile:    
