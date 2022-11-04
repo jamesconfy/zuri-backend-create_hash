@@ -9,5 +9,9 @@ obj = {
         "collection": {
             "name": "Zuri NFT Tickets for Free Lunch",
             "id": ""
-    }
+        },
+        "attributes": [{
+            "trait_type": "gender",
+            "value": ""
+        }]
 }

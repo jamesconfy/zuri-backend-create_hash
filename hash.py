@@ -24,6 +24,7 @@ with open(input, newline="") as file, open(output, "w", newline="") as out, open
         obj["name"] = row["Filename"] if row["Filename"] else ""
         obj["series_number"] = row["Serial Number"] if row["Serial Number"] else ""
         # obj["description"] = row["Description"] if row["Description"] else ""
+        # obj["attributes"][0]["value"] = row["Gender"] if row["Gender"] else ""
         obj["collection"]["id"] = row["UUID"] if row["UUID"] else ""
         obj["series_total"] = row_count
 
