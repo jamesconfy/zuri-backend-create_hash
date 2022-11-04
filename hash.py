@@ -19,6 +19,7 @@ with open(input, newline="") as file, open(output, "w", newline="") as out, open
     reader = csv.DictReader(file, delimiter=',', quotechar='|')
     writer = csv.DictWriter(out, delimiter=',', quotechar='|', fieldnames=["Serial Number", "Filename", "UUID", "Hashed"])
     writer.writeheader()
+    json_files = []
     for row in reader:
         obj = obj
         obj["name"] = row["Filename"] if row["Filename"] else ""
@@ -30,8 +31,9 @@ with open(input, newline="") as file, open(output, "w", newline="") as out, open
 
         json_file = json.dumps(obj, sort_keys=True, indent=2)
         hashed = hashlib.sha256(json_file.encode("utf-8")).hexdigest()
-
+        json_files.append(obj)
         
         row["Hashed"] = hashed
         writer.writerow(row)
-        outfile.write(json_file)
+        # outfile.write(json_file)
+    json.dump(json_files, outfile)
